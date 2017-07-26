@@ -1,0 +1,692 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F52E9AEA1F25866200F03FC3 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F52E9AE91F25866200F03FC3 /* UIImage+Extensions.m */; };
+		F52E9AED1F2587A900F03FC3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52E9AEC1F2587A900F03FC3 /* AssetsLibrary.framework */; };
+		F5417CC71F219C880022E23C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CC61F219C880022E23C /* main.m */; };
+		F5417CCA1F219C880022E23C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CC91F219C880022E23C /* AppDelegate.m */; };
+		F5417CCC1F219C880022E23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5417CCB1F219C880022E23C /* Assets.xcassets */; };
+		F5417CCF1F219C880022E23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5417CCD1F219C880022E23C /* LaunchScreen.storyboard */; };
+		F5417CDA1F219C880022E23C /* DesignClothesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CD91F219C880022E23C /* DesignClothesTests.m */; };
+		F5417CE51F219C880022E23C /* DesignClothesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CE41F219C880022E23C /* DesignClothesUITests.m */; };
+		F5417CF41F219D230022E23C /* DesignClothesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CF31F219D230022E23C /* DesignClothesViewController.m */; };
+		F5417CF71F21A0930022E23C /* DesignBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CF61F21A0930022E23C /* DesignBottomView.m */; };
+		F5417D511F21A2980022E23C /* MyBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D311F21A2980022E23C /* MyBaseLayout.m */; };
+		F5417D521F21A2980022E23C /* MyDimeScale.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D331F21A2980022E23C /* MyDimeScale.m */; };
+		F5417D531F21A2980022E23C /* MyFloatLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D351F21A2980022E23C /* MyFloatLayout.m */; };
+		F5417D541F21A2980022E23C /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D371F21A2980022E23C /* MyFlowLayout.m */; };
+		F5417D551F21A2980022E23C /* MyFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D391F21A2980022E23C /* MyFrameLayout.m */; };
+		F5417D561F21A2980022E23C /* MyLayoutDime.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D3D1F21A2980022E23C /* MyLayoutDime.m */; };
+		F5417D571F21A2980022E23C /* MyLayoutMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D411F21A2980022E23C /* MyLayoutMeasure.m */; };
+		F5417D581F21A2990022E23C /* MyLayoutPos.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D431F21A2980022E23C /* MyLayoutPos.m */; };
+		F5417D591F21A2990022E23C /* MyLayoutSizeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D461F21A2980022E23C /* MyLayoutSizeClass.m */; };
+		F5417D5A1F21A2990022E23C /* MyLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D481F21A2980022E23C /* MyLinearLayout.m */; };
+		F5417D5B1F21A2990022E23C /* MyMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D4A1F21A2980022E23C /* MyMaker.m */; };
+		F5417D5C1F21A2990022E23C /* MyPathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D4C1F21A2980022E23C /* MyPathLayout.m */; };
+		F5417D5D1F21A2990022E23C /* MyRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D4E1F21A2980022E23C /* MyRelativeLayout.m */; };
+		F5417D5E1F21A2990022E23C /* MyTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D501F21A2980022E23C /* MyTableLayout.m */; };
+		F5417D611F21A9B60022E23C /* DesignSourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D601F21A9B60022E23C /* DesignSourceView.m */; };
+		F5417D671F21AA0A0022E23C /* DesignRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417D661F21AA0A0022E23C /* DesignRightView.m */; };
+		F57608411F28716500DBB6B8 /* TCBGripViewBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F576083E1F28716500DBB6B8 /* TCBGripViewBorderView.m */; };
+		F57608421F28716500DBB6B8 /* TCBStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57608401F28716500DBB6B8 /* TCBStickerView.m */; };
+		F57608441F28734000DBB6B8 /* sampleImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57608431F28734000DBB6B8 /* sampleImage.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5417CD61F219C880022E23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5417CBA1F219C870022E23C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5417CC11F219C870022E23C;
+			remoteInfo = DesignClothes;
+		};
+		F5417CE11F219C880022E23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5417CBA1F219C870022E23C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5417CC11F219C870022E23C;
+			remoteInfo = DesignClothes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F52E9AE81F25866200F03FC3 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		F52E9AE91F25866200F03FC3 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		F52E9AEC1F2587A900F03FC3 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F5417CC21F219C880022E23C /* DesignClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5417CC61F219C880022E23C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5417CC81F219C880022E23C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5417CC91F219C880022E23C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5417CCB1F219C880022E23C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5417CCE1F219C880022E23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5417CD01F219C880022E23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5417CD51F219C880022E23C /* DesignClothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignClothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5417CD91F219C880022E23C /* DesignClothesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignClothesTests.m; sourceTree = "<group>"; };
+		F5417CDB1F219C880022E23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5417CE01F219C880022E23C /* DesignClothesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignClothesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5417CE41F219C880022E23C /* DesignClothesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignClothesUITests.m; sourceTree = "<group>"; };
+		F5417CE61F219C880022E23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5417CF21F219D230022E23C /* DesignClothesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignClothesViewController.h; sourceTree = "<group>"; };
+		F5417CF31F219D230022E23C /* DesignClothesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignClothesViewController.m; sourceTree = "<group>"; };
+		F5417CF51F21A0930022E23C /* DesignBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignBottomView.h; sourceTree = "<group>"; };
+		F5417CF61F21A0930022E23C /* DesignBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignBottomView.m; sourceTree = "<group>"; };
+		F5417D301F21A2980022E23C /* MyBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseLayout.h; sourceTree = "<group>"; };
+		F5417D311F21A2980022E23C /* MyBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseLayout.m; sourceTree = "<group>"; };
+		F5417D321F21A2980022E23C /* MyDimeScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDimeScale.h; sourceTree = "<group>"; };
+		F5417D331F21A2980022E23C /* MyDimeScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDimeScale.m; sourceTree = "<group>"; };
+		F5417D341F21A2980022E23C /* MyFloatLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFloatLayout.h; sourceTree = "<group>"; };
+		F5417D351F21A2980022E23C /* MyFloatLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFloatLayout.m; sourceTree = "<group>"; };
+		F5417D361F21A2980022E23C /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		F5417D371F21A2980022E23C /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
+		F5417D381F21A2980022E23C /* MyFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFrameLayout.h; sourceTree = "<group>"; };
+		F5417D391F21A2980022E23C /* MyFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFrameLayout.m; sourceTree = "<group>"; };
+		F5417D3A1F21A2980022E23C /* MyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayout.h; sourceTree = "<group>"; };
+		F5417D3B1F21A2980022E23C /* MyLayoutDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDef.h; sourceTree = "<group>"; };
+		F5417D3C1F21A2980022E23C /* MyLayoutDime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDime.h; sourceTree = "<group>"; };
+		F5417D3D1F21A2980022E23C /* MyLayoutDime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutDime.m; sourceTree = "<group>"; };
+		F5417D3E1F21A2980022E23C /* MyLayoutDimeInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDimeInner.h; sourceTree = "<group>"; };
+		F5417D3F1F21A2980022E23C /* MyLayoutInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutInner.h; sourceTree = "<group>"; };
+		F5417D401F21A2980022E23C /* MyLayoutMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutMeasure.h; sourceTree = "<group>"; };
+		F5417D411F21A2980022E23C /* MyLayoutMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutMeasure.m; sourceTree = "<group>"; };
+		F5417D421F21A2980022E23C /* MyLayoutPos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPos.h; sourceTree = "<group>"; };
+		F5417D431F21A2980022E23C /* MyLayoutPos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutPos.m; sourceTree = "<group>"; };
+		F5417D441F21A2980022E23C /* MyLayoutPosInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPosInner.h; sourceTree = "<group>"; };
+		F5417D451F21A2980022E23C /* MyLayoutSizeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSizeClass.h; sourceTree = "<group>"; };
+		F5417D461F21A2980022E23C /* MyLayoutSizeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutSizeClass.m; sourceTree = "<group>"; };
+		F5417D471F21A2980022E23C /* MyLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLinearLayout.h; sourceTree = "<group>"; };
+		F5417D481F21A2980022E23C /* MyLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLinearLayout.m; sourceTree = "<group>"; };
+		F5417D491F21A2980022E23C /* MyMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMaker.h; sourceTree = "<group>"; };
+		F5417D4A1F21A2980022E23C /* MyMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMaker.m; sourceTree = "<group>"; };
+		F5417D4B1F21A2980022E23C /* MyPathLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPathLayout.h; sourceTree = "<group>"; };
+		F5417D4C1F21A2980022E23C /* MyPathLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPathLayout.m; sourceTree = "<group>"; };
+		F5417D4D1F21A2980022E23C /* MyRelativeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelativeLayout.h; sourceTree = "<group>"; };
+		F5417D4E1F21A2980022E23C /* MyRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRelativeLayout.m; sourceTree = "<group>"; };
+		F5417D4F1F21A2980022E23C /* MyTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableLayout.h; sourceTree = "<group>"; };
+		F5417D501F21A2980022E23C /* MyTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableLayout.m; sourceTree = "<group>"; };
+		F5417D5F1F21A9B60022E23C /* DesignSourceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignSourceView.h; sourceTree = "<group>"; };
+		F5417D601F21A9B60022E23C /* DesignSourceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignSourceView.m; sourceTree = "<group>"; };
+		F5417D651F21AA0A0022E23C /* DesignRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignRightView.h; sourceTree = "<group>"; };
+		F5417D661F21AA0A0022E23C /* DesignRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignRightView.m; sourceTree = "<group>"; };
+		F576083D1F28716500DBB6B8 /* TCBGripViewBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCBGripViewBorderView.h; sourceTree = "<group>"; };
+		F576083E1F28716500DBB6B8 /* TCBGripViewBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCBGripViewBorderView.m; sourceTree = "<group>"; };
+		F576083F1F28716500DBB6B8 /* TCBStickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCBStickerView.h; sourceTree = "<group>"; };
+		F57608401F28716500DBB6B8 /* TCBStickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCBStickerView.m; sourceTree = "<group>"; };
+		F57608431F28734000DBB6B8 /* sampleImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sampleImage.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5417CBF1F219C870022E23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52E9AED1F2587A900F03FC3 /* AssetsLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5417CD21F219C880022E23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5417CDD1F219C880022E23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F52E9AEB1F2587A900F03FC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F52E9AEC1F2587A900F03FC3 /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5417CB91F219C870022E23C = {
+			isa = PBXGroup;
+			children = (
+				F5417CC41F219C880022E23C /* DesignClothes */,
+				F5417CD81F219C880022E23C /* DesignClothesTests */,
+				F5417CE31F219C880022E23C /* DesignClothesUITests */,
+				F5417CC31F219C880022E23C /* Products */,
+				F52E9AEB1F2587A900F03FC3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5417CC31F219C880022E23C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5417CC21F219C880022E23C /* DesignClothes.app */,
+				F5417CD51F219C880022E23C /* DesignClothesTests.xctest */,
+				F5417CE01F219C880022E23C /* DesignClothesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5417CC41F219C880022E23C /* DesignClothes */ = {
+			isa = PBXGroup;
+			children = (
+				F57608431F28734000DBB6B8 /* sampleImage.jpg */,
+				F5417D2E1F21A2980022E23C /* MyLayout */,
+				F5417CC81F219C880022E23C /* AppDelegate.h */,
+				F5417CC91F219C880022E23C /* AppDelegate.m */,
+				F52E9AE81F25866200F03FC3 /* UIImage+Extensions.h */,
+				F52E9AE91F25866200F03FC3 /* UIImage+Extensions.m */,
+				F5417CF21F219D230022E23C /* DesignClothesViewController.h */,
+				F5417CF31F219D230022E23C /* DesignClothesViewController.m */,
+				F576083D1F28716500DBB6B8 /* TCBGripViewBorderView.h */,
+				F576083E1F28716500DBB6B8 /* TCBGripViewBorderView.m */,
+				F576083F1F28716500DBB6B8 /* TCBStickerView.h */,
+				F57608401F28716500DBB6B8 /* TCBStickerView.m */,
+				F5417D5F1F21A9B60022E23C /* DesignSourceView.h */,
+				F5417D601F21A9B60022E23C /* DesignSourceView.m */,
+				F5417D651F21AA0A0022E23C /* DesignRightView.h */,
+				F5417D661F21AA0A0022E23C /* DesignRightView.m */,
+				F5417CF51F21A0930022E23C /* DesignBottomView.h */,
+				F5417CF61F21A0930022E23C /* DesignBottomView.m */,
+				F5417CCB1F219C880022E23C /* Assets.xcassets */,
+				F5417CCD1F219C880022E23C /* LaunchScreen.storyboard */,
+				F5417CD01F219C880022E23C /* Info.plist */,
+				F5417CC51F219C880022E23C /* Supporting Files */,
+			);
+			path = DesignClothes;
+			sourceTree = "<group>";
+		};
+		F5417CC51F219C880022E23C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5417CC61F219C880022E23C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5417CD81F219C880022E23C /* DesignClothesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5417CD91F219C880022E23C /* DesignClothesTests.m */,
+				F5417CDB1F219C880022E23C /* Info.plist */,
+			);
+			path = DesignClothesTests;
+			sourceTree = "<group>";
+		};
+		F5417CE31F219C880022E23C /* DesignClothesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5417CE41F219C880022E23C /* DesignClothesUITests.m */,
+				F5417CE61F219C880022E23C /* Info.plist */,
+			);
+			path = DesignClothesUITests;
+			sourceTree = "<group>";
+		};
+		F5417D2E1F21A2980022E23C /* MyLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F5417D2F1F21A2980022E23C /* Lib */,
+			);
+			path = MyLayout;
+			sourceTree = "<group>";
+		};
+		F5417D2F1F21A2980022E23C /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F5417D301F21A2980022E23C /* MyBaseLayout.h */,
+				F5417D311F21A2980022E23C /* MyBaseLayout.m */,
+				F5417D321F21A2980022E23C /* MyDimeScale.h */,
+				F5417D331F21A2980022E23C /* MyDimeScale.m */,
+				F5417D341F21A2980022E23C /* MyFloatLayout.h */,
+				F5417D351F21A2980022E23C /* MyFloatLayout.m */,
+				F5417D361F21A2980022E23C /* MyFlowLayout.h */,
+				F5417D371F21A2980022E23C /* MyFlowLayout.m */,
+				F5417D381F21A2980022E23C /* MyFrameLayout.h */,
+				F5417D391F21A2980022E23C /* MyFrameLayout.m */,
+				F5417D3A1F21A2980022E23C /* MyLayout.h */,
+				F5417D3B1F21A2980022E23C /* MyLayoutDef.h */,
+				F5417D3C1F21A2980022E23C /* MyLayoutDime.h */,
+				F5417D3D1F21A2980022E23C /* MyLayoutDime.m */,
+				F5417D3E1F21A2980022E23C /* MyLayoutDimeInner.h */,
+				F5417D3F1F21A2980022E23C /* MyLayoutInner.h */,
+				F5417D401F21A2980022E23C /* MyLayoutMeasure.h */,
+				F5417D411F21A2980022E23C /* MyLayoutMeasure.m */,
+				F5417D421F21A2980022E23C /* MyLayoutPos.h */,
+				F5417D431F21A2980022E23C /* MyLayoutPos.m */,
+				F5417D441F21A2980022E23C /* MyLayoutPosInner.h */,
+				F5417D451F21A2980022E23C /* MyLayoutSizeClass.h */,
+				F5417D461F21A2980022E23C /* MyLayoutSizeClass.m */,
+				F5417D471F21A2980022E23C /* MyLinearLayout.h */,
+				F5417D481F21A2980022E23C /* MyLinearLayout.m */,
+				F5417D491F21A2980022E23C /* MyMaker.h */,
+				F5417D4A1F21A2980022E23C /* MyMaker.m */,
+				F5417D4B1F21A2980022E23C /* MyPathLayout.h */,
+				F5417D4C1F21A2980022E23C /* MyPathLayout.m */,
+				F5417D4D1F21A2980022E23C /* MyRelativeLayout.h */,
+				F5417D4E1F21A2980022E23C /* MyRelativeLayout.m */,
+				F5417D4F1F21A2980022E23C /* MyTableLayout.h */,
+				F5417D501F21A2980022E23C /* MyTableLayout.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5417CC11F219C870022E23C /* DesignClothes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5417CE91F219C880022E23C /* Build configuration list for PBXNativeTarget "DesignClothes" */;
+			buildPhases = (
+				F5417CBE1F219C870022E23C /* Sources */,
+				F5417CBF1F219C870022E23C /* Frameworks */,
+				F5417CC01F219C870022E23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesignClothes;
+			productName = DesignClothes;
+			productReference = F5417CC21F219C880022E23C /* DesignClothes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5417CD41F219C880022E23C /* DesignClothesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5417CEC1F219C880022E23C /* Build configuration list for PBXNativeTarget "DesignClothesTests" */;
+			buildPhases = (
+				F5417CD11F219C880022E23C /* Sources */,
+				F5417CD21F219C880022E23C /* Frameworks */,
+				F5417CD31F219C880022E23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5417CD71F219C880022E23C /* PBXTargetDependency */,
+			);
+			name = DesignClothesTests;
+			productName = DesignClothesTests;
+			productReference = F5417CD51F219C880022E23C /* DesignClothesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5417CDF1F219C880022E23C /* DesignClothesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5417CEF1F219C880022E23C /* Build configuration list for PBXNativeTarget "DesignClothesUITests" */;
+			buildPhases = (
+				F5417CDC1F219C880022E23C /* Sources */,
+				F5417CDD1F219C880022E23C /* Frameworks */,
+				F5417CDE1F219C880022E23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5417CE21F219C880022E23C /* PBXTargetDependency */,
+			);
+			name = DesignClothesUITests;
+			productName = DesignClothesUITests;
+			productReference = F5417CE01F219C880022E23C /* DesignClothesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5417CBA1F219C870022E23C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = yswl;
+				TargetAttributes = {
+					F5417CC11F219C870022E23C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3GYM25Z4F4;
+						ProvisioningStyle = Automatic;
+					};
+					F5417CD41F219C880022E23C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3GYM25Z4F4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5417CC11F219C870022E23C;
+					};
+					F5417CDF1F219C880022E23C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3GYM25Z4F4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5417CC11F219C870022E23C;
+					};
+				};
+			};
+			buildConfigurationList = F5417CBD1F219C870022E23C /* Build configuration list for PBXProject "DesignClothes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5417CB91F219C870022E23C;
+			productRefGroup = F5417CC31F219C880022E23C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5417CC11F219C870022E23C /* DesignClothes */,
+				F5417CD41F219C880022E23C /* DesignClothesTests */,
+				F5417CDF1F219C880022E23C /* DesignClothesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5417CC01F219C870022E23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5417CCC1F219C880022E23C /* Assets.xcassets in Resources */,
+				F5417CCF1F219C880022E23C /* LaunchScreen.storyboard in Resources */,
+				F57608441F28734000DBB6B8 /* sampleImage.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5417CD31F219C880022E23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5417CDE1F219C880022E23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5417CBE1F219C870022E23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5417D551F21A2980022E23C /* MyFrameLayout.m in Sources */,
+				F5417D571F21A2980022E23C /* MyLayoutMeasure.m in Sources */,
+				F5417D5A1F21A2990022E23C /* MyLinearLayout.m in Sources */,
+				F5417D511F21A2980022E23C /* MyBaseLayout.m in Sources */,
+				F5417D561F21A2980022E23C /* MyLayoutDime.m in Sources */,
+				F5417CCA1F219C880022E23C /* AppDelegate.m in Sources */,
+				F57608421F28716500DBB6B8 /* TCBStickerView.m in Sources */,
+				F5417D591F21A2990022E23C /* MyLayoutSizeClass.m in Sources */,
+				F5417CC71F219C880022E23C /* main.m in Sources */,
+				F5417D671F21AA0A0022E23C /* DesignRightView.m in Sources */,
+				F5417D521F21A2980022E23C /* MyDimeScale.m in Sources */,
+				F5417D611F21A9B60022E23C /* DesignSourceView.m in Sources */,
+				F52E9AEA1F25866200F03FC3 /* UIImage+Extensions.m in Sources */,
+				F5417D5B1F21A2990022E23C /* MyMaker.m in Sources */,
+				F5417D5C1F21A2990022E23C /* MyPathLayout.m in Sources */,
+				F5417D531F21A2980022E23C /* MyFloatLayout.m in Sources */,
+				F5417D541F21A2980022E23C /* MyFlowLayout.m in Sources */,
+				F5417CF41F219D230022E23C /* DesignClothesViewController.m in Sources */,
+				F5417D581F21A2990022E23C /* MyLayoutPos.m in Sources */,
+				F5417CF71F21A0930022E23C /* DesignBottomView.m in Sources */,
+				F5417D5E1F21A2990022E23C /* MyTableLayout.m in Sources */,
+				F5417D5D1F21A2990022E23C /* MyRelativeLayout.m in Sources */,
+				F57608411F28716500DBB6B8 /* TCBGripViewBorderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5417CD11F219C880022E23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5417CDA1F219C880022E23C /* DesignClothesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5417CDC1F219C880022E23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5417CE51F219C880022E23C /* DesignClothesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5417CD71F219C880022E23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5417CC11F219C870022E23C /* DesignClothes */;
+			targetProxy = F5417CD61F219C880022E23C /* PBXContainerItemProxy */;
+		};
+		F5417CE21F219C880022E23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5417CC11F219C870022E23C /* DesignClothes */;
+			targetProxy = F5417CE11F219C880022E23C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5417CCD1F219C880022E23C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5417CCE1F219C880022E23C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5417CE71F219C880022E23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F5417CE81F219C880022E23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5417CEA1F219C880022E23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3GYM25Z4F4;
+				INFOPLIST_FILE = DesignClothes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yswl.DesignClothes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5417CEB1F219C880022E23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3GYM25Z4F4;
+				INFOPLIST_FILE = DesignClothes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yswl.DesignClothes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5417CED1F219C880022E23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3GYM25Z4F4;
+				INFOPLIST_FILE = DesignClothesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yswl.DesignClothesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesignClothes.app/DesignClothes";
+			};
+			name = Debug;
+		};
+		F5417CEE1F219C880022E23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3GYM25Z4F4;
+				INFOPLIST_FILE = DesignClothesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yswl.DesignClothesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesignClothes.app/DesignClothes";
+			};
+			name = Release;
+		};
+		F5417CF01F219C880022E23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3GYM25Z4F4;
+				INFOPLIST_FILE = DesignClothesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yswl.DesignClothesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DesignClothes;
+			};
+			name = Debug;
+		};
+		F5417CF11F219C880022E23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3GYM25Z4F4;
+				INFOPLIST_FILE = DesignClothesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yswl.DesignClothesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DesignClothes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5417CBD1F219C870022E23C /* Build configuration list for PBXProject "DesignClothes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5417CE71F219C880022E23C /* Debug */,
+				F5417CE81F219C880022E23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5417CE91F219C880022E23C /* Build configuration list for PBXNativeTarget "DesignClothes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5417CEA1F219C880022E23C /* Debug */,
+				F5417CEB1F219C880022E23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5417CEC1F219C880022E23C /* Build configuration list for PBXNativeTarget "DesignClothesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5417CED1F219C880022E23C /* Debug */,
+				F5417CEE1F219C880022E23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5417CEF1F219C880022E23C /* Build configuration list for PBXNativeTarget "DesignClothesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5417CF01F219C880022E23C /* Debug */,
+				F5417CF11F219C880022E23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5417CBA1F219C870022E23C /* Project object */;
+}
