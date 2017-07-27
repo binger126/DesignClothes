@@ -14,9 +14,6 @@
 
 
 @interface DesignClothesViewController ()
-{
-    CGFloat angle;
-}
 
 @property(nonatomic, strong) UIImageView *imageBG;
 @property(nonatomic, strong) UIView      *contentBG;
@@ -185,36 +182,6 @@
     return _sourceView;
 }
 
-#pragma mark -  手势代理方法
-//// 是否开始手势
-//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
-//{
-//    return YES;
-//}
-//
-////是否允许同时支持多个手势，默认是不支持多个手势
-//// 返回yes表示支持多个手势
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-//{
-//    return YES;
-//}
-//// 是否允许接收手指的触摸点
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-//{
-//    return YES;
-//}
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    
-}
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    
-}
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
