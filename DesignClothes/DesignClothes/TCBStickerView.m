@@ -72,14 +72,6 @@
     self.contentView.superview.transform = CGAffineTransformTranslate(self.contentView.superview.transform, curP.x, curP.y);
     // 复位,一定要复位
     [recognizer setTranslation:CGPointZero inView:self.contentView.superview];
-//    if (recognizer.state==UIGestureRecognizerStateBegan) {
-//        touchStart = [recognizer translationInView:self.superview];
-//    }else if (recognizer.state==UIGestureRecognizerStateChanged) {
-//        CGPoint touch = [recognizer translationInView:self.superview];
-//        [self translateUsingTouchLocation:touch];
-//    }else if (recognizer.state==UIGestureRecognizerStateEnded) {
-//        touchStart = [recognizer translationInView:self.superview];
-//    }
 }
 
 - (void)zoom:(UIPanGestureRecognizer *)recognizer {
@@ -100,11 +92,7 @@
     if (recognizer.state==UIGestureRecognizerStateBegan) {
         prevPoint = [recognizer locationInView:self];
         [self setNeedsDisplay];
-//        NSLog(@"--------prevPoint-x-%f \n---------prevPoint--y-%f",prevPoint.x,prevPoint.y);
     }else if (recognizer.state==UIGestureRecognizerStateChanged) {
-        
-//        CGPoint centerPoint = self.superview.center;
-//        NSLog(@"--------centerPoint--x-%f \n---------centerPoint--y-%f",prevPoint.x,prevPoint.y);
         CGFloat wChange = 0.0, hChange = 0.0;
         if (self.bounds.size.width < minWidth || self.bounds.size.height < minHeight) {
             self.bounds = CGRectMake(self.bounds.origin.x,self.bounds.origin.y,minWidth,minHeight);
@@ -113,14 +101,14 @@
                 zoomControl.frame = CGRectMake(0, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 rotateControl.frame = CGRectMake(self.bounds.size.width-kTCBStickerViewControlSize, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 deleteControl.frame = CGRectMake(0 ,self.bounds.size.height-kTCBStickerViewControlSize, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
-//                self.contentView.transform = CGAffineTransformMakeRotation(M_PI);
+                self.contentView.transform = CGAffineTransformMakeRotation(M_PI);
                 self.transform = CGAffineTransformMakeRotation(M_PI);
             }else{
                 zoomControl.frame = CGRectMake(self.bounds.size.width-kTCBStickerViewControlSize, self.bounds.size.height-kTCBStickerViewControlSize, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 editControl.frame = CGRectMake(0, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 deleteControl.frame = CGRectMake(self.bounds.size.width-kTCBStickerViewControlSize, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 rotateControl.frame = CGRectMake(0 ,self.bounds.size.height-kTCBStickerViewControlSize, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
-//                self.contentView.transform = CGAffineTransformMakeRotation(0.0);
+                self.contentView.transform = CGAffineTransformMakeRotation(0.0);
                 self.transform = CGAffineTransformMakeRotation(0.0);
             }
             isTransform=!isTransform;
@@ -153,27 +141,23 @@
                 hChange = 0.0;
             }
             self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width + (wChange), self.bounds.size.height + (hChange));
-//            if (self.bounds.size.width < minWidth || self.bounds.size.height < minHeight) {
-//                self.bounds = CGRectMake(self.bounds.origin.x,self.bounds.origin.y,minWidth,minHeight);
-//            }
+
             if (!isTransform) {
                 zoomControl.frame = CGRectMake(self.bounds.size.width-kTCBStickerViewControlSize,self.bounds.size.height-kTCBStickerViewControlSize, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 editControl.frame = CGRectMake(0, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 deleteControl.frame = CGRectMake(self.bounds.size.width-kTCBStickerViewControlSize, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 rotateControl.frame = CGRectMake(0, self.bounds.size.height-kTCBStickerViewControlSize,kTCBStickerViewControlSize, kTCBStickerViewControlSize);
-//                self.contentView.transform = CGAffineTransformMakeRotation(0.0);
+                self.contentView.transform = CGAffineTransformMakeRotation(0.0);
             }else{
                 editControl.frame = CGRectMake(self.bounds.size.width-kTCBStickerViewControlSize, self.bounds.size.height-kTCBStickerViewControlSize, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 zoomControl.frame = CGRectMake(0, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 rotateControl.frame = CGRectMake(self.bounds.size.width-kTCBStickerViewControlSize, 0, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
                 deleteControl.frame = CGRectMake(0 ,self.bounds.size.height-kTCBStickerViewControlSize, kTCBStickerViewControlSize, kTCBStickerViewControlSize);
-//                self.contentView.transform = CGAffineTransformMakeRotation(M_PI);
+                self.contentView.transform = CGAffineTransformMakeRotation(M_PI);
             }
-            
             prevPoint = [recognizer locationInView:self];
             [self setNeedsDisplay];
         }
-    
         /* Rotation */
         if (self.tcbGesture == 2) {
             CGFloat ang = atan2([recognizer locationInView:self.superview].y - self.center.y,
