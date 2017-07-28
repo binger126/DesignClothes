@@ -14,6 +14,7 @@
 
 #import "TCBPasterStageView.h"
 
+
 #import "UIImage+AddFunction.h"
 
 #define APPFRAME        [UIScreen mainScreen].bounds
@@ -46,7 +47,14 @@
     
 }
 - (void)rightClick:(UIButton *)sender {
-//    UIImage *image = [UIImage getImageFromView:self.imageBG];
+    UIImage *image = [UIImage getImageFromView:self.imageBG];
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+}
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
+    if (!error) {
+        NSLog(@"保存成功！");
+    }
 }
 
 - (void)addChildView
@@ -61,7 +69,7 @@
 //    [self.imageBG addSubview:self.contentView];
     _stageView = [[TCBPasterStageView alloc] initWithFrame:CGRectMake((375-220)/2, 150, 220, 260)] ;
     _stageView.originImage = [UIImage imageNamed:@"sampleImage.jpg"];
-    _stageView.backgroundColor = [UIColor redColor];
+    _stageView.backgroundColor = [UIColor whiteColor];
     _stageView.delegate = self;
     
     [self.imageBG addSubview:_stageView];
@@ -70,9 +78,7 @@
     [self.view addSubview:self.sourceView];
     [self.view addSubview:self.bottomView];
 //    [self.contentView addSubview:self.contentSubView];
-    
-    
-    
+
 }
 - (void)setTouchEvent
 {
@@ -113,6 +119,9 @@
     self.sourceView.addPasterImageBlock = ^(UIImage *image) {
         [weakSelf.stageView addPasterWithImg:image];
     };
+    self.sourceView.filterPasterStageBlock = ^(UIImage *image) {
+        weakSelf.stageView.m_filterPaster.imagePaster = image;
+    };
 }
 
 #pragma mark -- TCBPasterStageViewDelegate
@@ -137,6 +146,13 @@
     
 }
 
+- (void)m_filterPaster:(TCBPasterView *)m_filterPaster
+{
+    if (self.sourceView.type==4) {
+        [self.sourceView setFilter:m_filterPaster.imagePaster];
+    }
+}
+
 - (void)showAnimateView:(UIButton *)sender {
     if (sender.isSelected) {
         [UIView animateWithDuration:0.5 animations:^{
@@ -154,6 +170,7 @@
         }];
         self.sourceView.pasterList = nil;
         self.sourceView.type = sender.tag;
+        [self.sourceView cancelFilter];
         switch (sender.tag) {
             case 1:
                 self.sourceView.pasterList = @[@"gaoyuanyuan1",@"gaoyuanyuan2.jpg",@"sampleImage.jpg",@"gaoyuanyuan1",@"gaoyuanyuan2.jpg"];
@@ -165,7 +182,9 @@
                 
                 break;
             case 4:
-                
+                if (_stageView.m_filterPaster.imagePaster) {
+                    [self.sourceView setFilter:_stageView.m_filterPaster.imagePaster];
+                }
                 break;
             default:
                 break;

@@ -11,11 +11,16 @@
 
 @interface DesignSourceView : UIView
 
-@property(nonatomic, strong) NSArray        *pasterList;
+@property(nonatomic, strong) NSArray *pasterList;
 
 @property(nonatomic) NSInteger type;
 
 @property(nonatomic, copy) void(^changePasterStageBlock)(UIImage *image);
 @property(nonatomic, copy) void(^addPasterImageBlock)(UIImage *image);
+
+@property(nonatomic, copy) void(^filterPasterStageBlock)(UIImage *image);
+
+- (void)cancelFilter;
+- (void)setFilter:(UIImage *)originalImage;
 
 @end

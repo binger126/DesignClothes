@@ -1,13 +1,12 @@
 //
 //  TCBPasterStageView.m
-//  TCBPasterManager
+//  TCBPasterStageView
 //
 //  Created by apple on 15/7/8.
 //  Copyright (c) 2015年 teason. All rights reserved.
 //
 
 #import "TCBPasterStageView.h"
-#import "TCBPasterView.h"
 #import "UIImage+AddFunction.h"
 
 #define APPFRAME    [UIScreen mainScreen].bounds
@@ -21,18 +20,21 @@
 
 @property (nonatomic,strong) UIButton       *bgButton;
 @property (nonatomic,strong) UIImageView    *imgView;
-@property (nonatomic,strong) TCBPasterView   *pasterCurrent;
+@property (nonatomic,strong) TCBPasterView  *pasterCurrent;
 @property (nonatomic)        int            newPasterID;
 
 @end
 
 @implementation TCBPasterStageView
 
+@synthesize m_filterPaster;
+
 - (void)setOriginImage:(UIImage *)originImage
 {
     _originImage = originImage;
     self.imgView.image = originImage;
 }
+
 
 - (int)newPasterID
 {
@@ -44,6 +46,8 @@
 {
     _pasterCurrent = pasterCurrent;
     [self bringSubviewToFront:_pasterCurrent];
+    m_filterPaster = _pasterCurrent;
+    [self.delegate m_filterPaster:_pasterCurrent];
 }
 
 - (UIButton *)bgButton

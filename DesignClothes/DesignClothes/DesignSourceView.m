@@ -8,6 +8,7 @@
 
 #import "DesignSourceView.h"
 #import "PasterChooseView.h"
+#import "TCBFilterScrollView.h"
 ///// View 圆角
 //#define ViewRadius(View, Radius)\
 //\
@@ -22,7 +23,7 @@ View.layer.borderWidth = BorderWidth;
 
 static const CGFloat width_pasterChoose = 110.0f;
 
-@interface DesignSourceView ()<PasterChooseViewDelegate>
+@interface DesignSourceView ()<PasterChooseViewDelegate,TCBFilterScrollViewDelegate>
 
 @property(nonatomic, strong) UIScrollView *topScrollView;
 @property(nonatomic, strong) UIButton     *addScrollItem;
@@ -30,6 +31,8 @@ static const CGFloat width_pasterChoose = 110.0f;
 @property(nonatomic, strong) NSMutableArray *topTitleArray;
 
 @property(nonatomic, strong) UIScrollView   *pasterScrollView;
+/**装多个滤镜样式的scrollView*/
+@property(nonatomic, strong) TCBFilterScrollView *filterScrollView;
 
 @end
 
@@ -60,6 +63,7 @@ static const CGFloat width_pasterChoose = 110.0f;
         self.topScrollView.rightPos.equalTo(self.addScrollItem.leftPos).offset(-1.0);
         [self addScrollItemArray];
         [self addSubview:self.pasterScrollView];
+        [self addSubview:self.filterScrollView];
     }
     return self;
 }
@@ -218,14 +222,79 @@ static const CGFloat width_pasterChoose = 110.0f;
         _x += width_pasterChoose;
     }
 }
-//- (NSArray *)pasterList
-//{
-//    if (!_pasterList) {
-//        _pasterList = @[@"1",@"2",@"3",@"4",@"5"];
+/**
+ *  懒加载-get方法设置自定义滤镜的scrollView
+ */
+- (TCBFilterScrollView *)filterScrollView
+{
+    if (!_filterScrollView) {
+        _filterScrollView = [[TCBFilterScrollView alloc]initWithFrame:CGRectMake(0, 40, 375, 160)];
+        _filterScrollView.backgroundColor = [UIColor lightGrayColor];
+        _filterScrollView.showsHorizontalScrollIndicator = YES;
+        _filterScrollView.bounces = YES;
+        [_filterScrollView setHidden:YES];
+    }
+    return _filterScrollView;
+}
+#pragma mark - YBPasterScrollViewDelegate
+- (void)pasterTag:(NSInteger)pasterTag pasterImage:(UIImage *)pasterImage
+{
+//    if (self.pasterView) {
+//        [self.pasterView removeFromSuperview];
+//        self.pasterView = nil;
 //    }
+//    YBPasterView *pasterView = [[YBPasterView alloc]initWithFrame:CGRectMake(0, 0, defaultPasterViewW_H, defaultPasterViewW_H)];
+//    pasterView.center = CGPointMake(self.pasterImageView.frame.size.width/2, self.pasterImageView.frame.size.height/2);
+//    pasterView.pasterImage = pasterImage;
+//    pasterView.delegate = self;
+//    [self.pasterImageView addSubview:pasterView];
+//    self.pasterView = pasterView;
 //    
-//    return _pasterList;
-//}
+    //[self.pasterViewMutArr addObject:pasterView];
+    //NSLog(@"%lu",(unsigned long)self.pasterViewMutArr.count);
+    
+    
+}
+
+#pragma mark - TCBFilterScrollViewDelegate
+- (void)filterImage:(UIImage *)editedImage
+{
+    if (self.filterPasterStageBlock) {
+        self.filterPasterStageBlock(editedImage);
+    }
+}
+/**
+ *  测试有返回值的代理
+ */
+- (NSString *)deliverStr:(NSString *)originalStr
+{
+    NSString *string;
+    string = originalStr;
+    return string;
+}
+- (void)cancelFilter
+{
+    [self.pasterScrollView setHidden:NO];
+    [_filterScrollView setHidden:YES];
+}
+- (void)setFilter:(UIImage *)originalImage
+{
+    [self.pasterScrollView setHidden:YES];
+    [_filterScrollView setHidden:NO];
+    for (UIView *view in _filterScrollView.subviews) {
+        [view removeFromSuperview];
+    }
+    NSArray *titleArray = @[@"原图",@"LOMO",@"黑白",@"复古",@"哥特",@"瑞华",@"淡雅",@"酒红",@"青柠",@"浪漫",@"光晕",@"蓝调",@"梦幻",@"夜色"];
+    _filterScrollView.titleArray = titleArray;
+    _filterScrollView.filterScrollViewW = 160;
+    _filterScrollView.insert_space = 15*2/3;
+    _filterScrollView.labelH = 30;
+    _filterScrollView.originImage = originalImage;
+    _filterScrollView.perButtonW_H = _filterScrollView.filterScrollViewW - 2*_filterScrollView.insert_space - 30;
+    _filterScrollView.contentSize = CGSizeMake(_filterScrollView.perButtonW_H * titleArray.count + _filterScrollView.insert_space * (titleArray.count + 1), 160);
+    _filterScrollView.filterDelegate = self;
+    [_filterScrollView loadScrollView];
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

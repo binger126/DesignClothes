@@ -1,6 +1,6 @@
 //
 //  TCBPasterView.m
-//  TCBPasterManager
+//  TCBPasterView
 //
 //  Created by apple on 15/7/8.
 //  Copyright (c) 2015年 teason. All rights reserved.
@@ -69,7 +69,7 @@
     [super setFrame:newFrame];
     
     CGRect rect = CGRectZero;
-    CGFloat sliderContent = PASTER_SLIDE - FLEX_SLIDE * 2 ;
+    CGFloat sliderContent = PASTER_SLIDE - FLEX_SLIDE * 2;
     rect.origin = CGPointMake(FLEX_SLIDE, FLEX_SLIDE);
     rect.size = CGSizeMake(sliderContent, sliderContent);
     self.imgContentView.frame = rect;
@@ -120,7 +120,7 @@
             prevPoint = [recognizer locationInView:self];
         }
         /* Rotation */
-        CGFloat ang = atan2([recognizer locationInView:self.superview].y - self.center.y, [recognizer locationInView:self.superview].x - self.center.x) ;
+        CGFloat ang = atan2([recognizer locationInView:self.superview].y - self.center.y, [recognizer locationInView:self.superview].x - self.center.x);
         CGFloat angleDiff = deltaAngle - ang;
         self.transform = CGAffineTransformMakeRotation(-angleDiff);
         [self setNeedsDisplay];
@@ -158,7 +158,7 @@
 }
 
 //- (void)panTranslate:(UIPanGestureRecognizer *)recognizer {
-////    self.isOnFirst = YES ;
+////    self.isOnFirst = YES;
 //    CGPoint curP = [recognizer translationInView:recognizer.view];
 //    recognizer.view.transform = CGAffineTransformTranslate(recognizer.view.transform, curP.x, curP.y);
 //    // 复位,一定要复位
@@ -311,7 +311,7 @@
 
 //- (void)btOriginalAction
 //{
-//    [self.delegate clickOriginalButton] ;
+//    [self.delegate clickOriginalButton];
 //}
 
 @end
