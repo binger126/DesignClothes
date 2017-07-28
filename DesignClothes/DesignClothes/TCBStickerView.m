@@ -40,7 +40,7 @@
 
 @synthesize prevPoint;
 @synthesize deltaAngle, startTransform; //rotation
-@synthesize zoomControl, deleteControl,rotateControl, editControl;
+@synthesize zoomControl, deleteControl, rotateControl, editControl;
 @synthesize preventsPositionOutsideSuperview;
 @synthesize preventsResizing;
 @synthesize preventsDeleting;
@@ -117,7 +117,8 @@
         }else {
             CGPoint point = [recognizer locationInView:self];
             wChange = (point.x - prevPoint.x);
-            hChange = (point.y - prevPoint.y);
+            CGFloat wRatioChange = (wChange/(CGFloat)self.bounds.size.width);
+            hChange = wRatioChange * self.bounds.size.height;
             if (ABS(wChange) > 20.0f || ABS(hChange) > 20.0f) {
                 prevPoint = [recognizer locationInView:self];
                 [self setNeedsDisplay];

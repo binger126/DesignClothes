@@ -11,4 +11,11 @@
 
 @interface DesignSourceView : UIView
 
+@property(nonatomic, strong) NSArray        *pasterList;
+
+@property(nonatomic) NSInteger type;
+
+@property(nonatomic, copy) void(^changePasterStageBlock)(UIImage *image);
+@property(nonatomic, copy) void(^addPasterImageBlock)(UIImage *image);
+
 @end

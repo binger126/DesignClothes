@@ -7,6 +7,7 @@
 //
 
 #import "DesignSourceView.h"
+#import "PasterChooseView.h"
 ///// View 圆角
 //#define ViewRadius(View, Radius)\
 //\
@@ -19,17 +20,22 @@
 View.layer.borderColor = BorderColor.CGColor;\
 View.layer.borderWidth = BorderWidth;
 
-@interface DesignSourceView ()
+static const CGFloat width_pasterChoose = 110.0f;
+
+@interface DesignSourceView ()<PasterChooseViewDelegate>
 
 @property(nonatomic, strong) UIScrollView *topScrollView;
 @property(nonatomic, strong) UIButton     *addScrollItem;
 
 @property(nonatomic, strong) NSMutableArray *topTitleArray;
 
+@property(nonatomic, strong) UIScrollView   *pasterScrollView;
 
 @end
 
 @implementation DesignSourceView
+
+@synthesize type;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -53,6 +59,7 @@ View.layer.borderWidth = BorderWidth;
         self.topScrollView.bottomPos.equalTo(rootLayout.bottomPos);
         self.topScrollView.rightPos.equalTo(self.addScrollItem.leftPos).offset(-1.0);
         [self addScrollItemArray];
+        [self addSubview:self.pasterScrollView];
     }
     return self;
 }
@@ -105,6 +112,34 @@ View.layer.borderWidth = BorderWidth;
     [UIView setAnimationDuration:0.5];
     self.topScrollView.contentOffset = CGPointMake(offsetX, 0);
     [UIView commitAnimations];
+    
+    
+}
+
+#pragma mark - PasterChooseViewDelegate
+- (void)pasterClick:(NSString *)paster
+{
+    UIImage *image = [UIImage imageNamed:paster];
+    
+    if (!image) return;
+    
+    
+    if (type==1) {
+        if (self.changePasterStageBlock) {
+            self.changePasterStageBlock(image);
+        }
+    }else if (type==2) {
+        if (self.addPasterImageBlock) {
+            self.addPasterImageBlock(image);
+        }
+    }else if (type==3) {
+       
+    }else if (type==4) {
+        
+    }
+    
+    //在这里 添加 贴纸
+//    [_stageView addPasterWithImg:image];
 }
 
 - (UIScrollView *)topScrollView
@@ -139,6 +174,58 @@ View.layer.borderWidth = BorderWidth;
     }
     return _topTitleArray;
 }
+
+#pragma mark - Property
+- (UIScrollView *)pasterScrollView
+{
+    if (!_pasterScrollView) {
+        _pasterScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 40, 375, 160)];
+        _pasterScrollView.pagingEnabled = NO;
+        _pasterScrollView.showsVerticalScrollIndicator = NO;
+        _pasterScrollView.showsHorizontalScrollIndicator = NO;
+        _pasterScrollView.bounces = YES;
+//        _pasterScrollView.contentSize = CGSizeMake(width_pasterChoose*self.pasterList.count,
+//                                               _pasterScrollView.frame.size.height);
+//        int _x = 0;
+//        for (int i = 0; i < self.pasterList.count; i++) {
+//            CGRect rect = CGRectMake(_x, 0, width_pasterChoose, _pasterScrollView.frame.size.height);
+//            PasterChooseView *pView = (PasterChooseView *)[[[NSBundle mainBundle] loadNibNamed:@"PasterChooseView" owner:self options:nil] lastObject];
+//            pView.frame = rect;
+//            pView.aPaster = self.pasterList[i];
+//            pView.delegate = self;
+//            [_pasterScrollView addSubview:pView];
+//            _x += width_pasterChoose;
+//        }
+    }
+    return _pasterScrollView;
+}
+- (void)setPasterList:(NSArray *)pasterList
+{
+    _pasterList = [pasterList copy];
+    _pasterScrollView.contentSize = CGSizeMake(width_pasterChoose*_pasterList.count,
+                                               _pasterScrollView.frame.size.height);
+    for (UIView *view in _pasterScrollView.subviews) {
+        [view removeFromSuperview];
+    }
+    int _x = 0;
+    for (int i = 0; i < _pasterList.count; i++) {
+        CGRect rect = CGRectMake(_x, 0, width_pasterChoose, _pasterScrollView.frame.size.height);
+        PasterChooseView *pView = (PasterChooseView *)[[[NSBundle mainBundle] loadNibNamed:@"PasterChooseView" owner:self options:nil] lastObject];
+        pView.frame = rect;
+        pView.aPaster = _pasterList[i];
+        pView.delegate = self;
+        [_pasterScrollView addSubview:pView];
+        _x += width_pasterChoose;
+    }
+}
+//- (NSArray *)pasterList
+//{
+//    if (!_pasterList) {
+//        _pasterList = @[@"1",@"2",@"3",@"4",@"5"];
+//    }
+//    
+//    return _pasterList;
+//}
 
 /*
 // Only override drawRect: if you perform custom drawing.

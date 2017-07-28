@@ -12,17 +12,23 @@
 #import "TCBStickerView.h"
 #import "DesignSourceView.h"
 
+#import "TCBPasterStageView.h"
 
-@interface DesignClothesViewController ()
+#import "UIImage+AddFunction.h"
+
+#define APPFRAME        [UIScreen mainScreen].bounds
+
+@interface DesignClothesViewController ()<TCBPasterStageViewDelegate>
 
 @property(nonatomic, strong) UIImageView *imageBG;
 @property(nonatomic, strong) UIView      *contentBG;
 @property(nonatomic, strong) UIView      *contentView;
 
-@property(nonatomic, strong) DesignRightView   *rightView;
-@property(nonatomic, strong) DesignBottomView  *bottomView;
-@property(nonatomic, strong) TCBStickerView    *contentSubView;
-@property(nonatomic, strong) DesignSourceView  *sourceView;
+@property(nonatomic, strong) DesignRightView    *rightView;
+@property(nonatomic, strong) DesignBottomView   *bottomView;
+@property(nonatomic, strong) TCBStickerView     *contentSubView;
+@property(nonatomic, strong) TCBPasterStageView *stageView;
+@property(nonatomic, strong) DesignSourceView   *sourceView;
 
 @property(nonatomic, strong) UIPanGestureRecognizer *panGesture;
 @property(nonatomic, strong) UIRotationGestureRecognizer *rotateGesture;
@@ -39,17 +45,34 @@
     [self setTouchEvent];
     
 }
+- (void)rightClick:(UIButton *)sender {
+//    UIImage *image = [UIImage getImageFromView:self.imageBG];
+}
 
 - (void)addChildView
 {
     [self.view addSubview:self.imageBG];
-    [self.view addSubview:self.contentView];
-    [self.view addSubview:self.contentBG];
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton.frame = CGRectMake(375-55, 20, 50, 44);
+    [rightButton setTitle:@"保存" forState:UIControlStateNormal];
+    [rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(rightClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:rightButton];
+//    [self.imageBG addSubview:self.contentView];
+    _stageView = [[TCBPasterStageView alloc] initWithFrame:CGRectMake((375-220)/2, 150, 220, 260)] ;
+    _stageView.originImage = [UIImage imageNamed:@"sampleImage.jpg"];
+    _stageView.backgroundColor = [UIColor redColor];
+    _stageView.delegate = self;
+    
+    [self.imageBG addSubview:_stageView];
+    [self.imageBG addSubview:self.contentBG];
     [self.view addSubview:self.rightView];
     [self.view addSubview:self.sourceView];
     [self.view addSubview:self.bottomView];
+//    [self.contentView addSubview:self.contentSubView];
     
-    [self.contentView addSubview:self.contentSubView];
+    
+    
 }
 - (void)setTouchEvent
 {
@@ -59,16 +82,16 @@
         if (sender.isSelected) {
             [UIView animateWithDuration:0.5 animations:^{
                 weakSelf.imageBG.transform = CGAffineTransformIdentity;
-                weakSelf.contentBG.transform = CGAffineTransformIdentity;
-                weakSelf.contentView.transform = CGAffineTransformIdentity;
+//                weakSelf.contentBG.transform = CGAffineTransformIdentity;
+//                weakSelf.contentView.transform = CGAffineTransformIdentity;
             } completion:^(BOOL finished) {
                 [sender setSelected:!sender.isSelected];
             }];
         }else{
             [UIView animateWithDuration:0.5 animations:^{
                 weakSelf.imageBG.transform = CGAffineTransformScale(weakSelf.view.transform, 1.5, 1.5);
-                weakSelf.contentBG.transform = CGAffineTransformScale(weakSelf.view.transform, 1.5, 1.5);
-                weakSelf.contentView.transform = CGAffineTransformScale(weakSelf.view.transform, 1.5, 1.5);
+//                weakSelf.contentBG.transform = CGAffineTransformScale(weakSelf.view.transform, 1.5, 1.5);
+//                weakSelf.contentView.transform = CGAffineTransformScale(weakSelf.view.transform, 1.5, 1.5);
             } completion:^(BOOL finished) {
                 [sender setSelected:!sender.isSelected];
             }];
@@ -84,19 +107,34 @@
         [weakSelf showAnimateView:sender];
         [weakSelf.rightView setDefaultState:!sender.isSelected];
     };
+    self.sourceView.changePasterStageBlock = ^(UIImage *image) {
+        weakSelf.stageView.originImage = image;
+    };
+    self.sourceView.addPasterImageBlock = ^(UIImage *image) {
+        [weakSelf.stageView addPasterWithImg:image];
+    };
 }
 
+#pragma mark -- TCBPasterStageViewDelegate
 
-
-- (void)imageBGPan:(UIGestureRecognizer *)gesture
+- (void)stickerTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (gesture.state==UIGestureRecognizerStateBegan) {
-        [self.contentBG setHidden:NO];
-    }else if (gesture.state==UIGestureRecognizerStateChanged) {
-        [self.contentBG setHidden:NO];
-    }else if (gesture.state==UIGestureRecognizerStateEnded) {
-        [self.contentBG setHidden:YES];
-    }
+    [self.contentBG setHidden:NO];
+    _stageView.clipsToBounds = NO;
+}
+- (void)stickerTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.contentBG setHidden:NO];
+    _stageView.clipsToBounds = NO;
+}
+- (void)stickerTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.contentBG setHidden:YES];
+    _stageView.clipsToBounds = YES;
+}
+- (void)stickerTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
 }
 
 - (void)showAnimateView:(UIButton *)sender {
@@ -114,16 +152,33 @@
         } completion:^(BOOL finished) {
             [sender setSelected:!sender.isSelected];
         }];
+        self.sourceView.pasterList = nil;
+        self.sourceView.type = sender.tag;
+        switch (sender.tag) {
+            case 1:
+                self.sourceView.pasterList = @[@"gaoyuanyuan1",@"gaoyuanyuan2.jpg",@"sampleImage.jpg",@"gaoyuanyuan1",@"gaoyuanyuan2.jpg"];
+                break;
+            case 2:
+                self.sourceView.pasterList = @[@"1",@"2",@"3",@"4",@"5"];
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            default:
+                break;
+        }
     }
 }
 
 - (UIImageView *)imageBG
 {
     if (!_imageBG) {
-        _imageBG = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
-        _imageBG.backgroundColor = [UIColor lightTextColor];
+        _imageBG = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 375, 627)];
+        _imageBG.backgroundColor = [UIColor lightGrayColor];
         _imageBG.userInteractionEnabled = YES;
-        [_imageBG addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(imageBGPan:)]];
     }
     return _imageBG;
 }
@@ -168,7 +223,7 @@
 {
     if (!_contentBG) {
         _contentBG = [[UIView alloc] initWithFrame:CGRectMake((375-220)/2, 150, 220, 260)];
-        _contentBG.backgroundColor = [UIColor lightGrayColor];
+        _contentBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
         _contentBG.userInteractionEnabled = YES;
         [_contentBG setHidden:YES];
     }
