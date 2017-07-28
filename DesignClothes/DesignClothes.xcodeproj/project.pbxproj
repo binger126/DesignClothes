@@ -10,14 +10,14 @@
 		F52E9AED1F2587A900F03FC3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52E9AEC1F2587A900F03FC3 /* AssetsLibrary.framework */; };
 		F539429F1F2B0C6D00754287 /* gaoyuanyuan2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F539429D1F2B0C6D00754287 /* gaoyuanyuan2.jpg */; };
 		F53942A01F2B0C6D00754287 /* gaoyuanyuan1.png in Resources */ = {isa = PBXBuildFile; fileRef = F539429E1F2B0C6D00754287 /* gaoyuanyuan1.png */; };
-		F53942A41F2B23C000754287 /* TCBFilterScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942A31F2B23C000754287 /* TCBFilterScrollView.m */; };
-		F53942B41F2B253100754287 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942A81F2B253100754287 /* ImageUtil.m */; };
-		F53942B51F2B253100754287 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942AB1F2B253100754287 /* UIImage+Alpha.m */; };
-		F53942B61F2B253100754287 /* UIImage+Cut.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942AD1F2B253100754287 /* UIImage+Cut.m */; };
-		F53942B71F2B253100754287 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942AF1F2B253100754287 /* UIImage+Resize.m */; };
-		F53942B81F2B253100754287 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942B11F2B253100754287 /* UIImage+RoundedCorner.m */; };
-		F53942B91F2B253100754287 /* UIImage+SplitImageIntoTwoParts.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942B31F2B253100754287 /* UIImage+SplitImageIntoTwoParts.m */; };
-		F53942BC1F2B3CE300754287 /* UIImage+AddFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942BB1F2B3CE300754287 /* UIImage+AddFunction.m */; };
+		F53942D11F2B40A700754287 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942C11F2B40A700754287 /* ImageUtil.m */; };
+		F53942D21F2B40A700754287 /* UIImage+AddFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942C41F2B40A700754287 /* UIImage+AddFunction.m */; };
+		F53942D31F2B40A700754287 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942C61F2B40A700754287 /* UIImage+Alpha.m */; };
+		F53942D41F2B40A700754287 /* UIImage+Cut.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942C81F2B40A700754287 /* UIImage+Cut.m */; };
+		F53942D51F2B40A700754287 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942CA1F2B40A700754287 /* UIImage+Resize.m */; };
+		F53942D61F2B40A700754287 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942CC1F2B40A700754287 /* UIImage+RoundedCorner.m */; };
+		F53942D71F2B40A700754287 /* UIImage+SplitImageIntoTwoParts.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942CE1F2B40A700754287 /* UIImage+SplitImageIntoTwoParts.m */; };
+		F53942D81F2B40A700754287 /* TCBFilterScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53942D01F2B40A700754287 /* TCBFilterScrollView.m */; };
 		F5417CC71F219C880022E23C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CC61F219C880022E23C /* main.m */; };
 		F5417CCA1F219C880022E23C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5417CC91F219C880022E23C /* AppDelegate.m */; };
 		F5417CCC1F219C880022E23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5417CCB1F219C880022E23C /* Assets.xcassets */; };
@@ -72,23 +72,23 @@
 		F52E9AEC1F2587A900F03FC3 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F539429D1F2B0C6D00754287 /* gaoyuanyuan2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gaoyuanyuan2.jpg; sourceTree = "<group>"; };
 		F539429E1F2B0C6D00754287 /* gaoyuanyuan1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gaoyuanyuan1.png; sourceTree = "<group>"; };
-		F53942A21F2B23C000754287 /* TCBFilterScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCBFilterScrollView.h; sourceTree = "<group>"; };
-		F53942A31F2B23C000754287 /* TCBFilterScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCBFilterScrollView.m; sourceTree = "<group>"; };
-		F53942A61F2B253100754287 /* ColorMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
-		F53942A71F2B253100754287 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
-		F53942A81F2B253100754287 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
-		F53942AA1F2B253100754287 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
-		F53942AB1F2B253100754287 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
-		F53942AC1F2B253100754287 /* UIImage+Cut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cut.h"; sourceTree = "<group>"; };
-		F53942AD1F2B253100754287 /* UIImage+Cut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cut.m"; sourceTree = "<group>"; };
-		F53942AE1F2B253100754287 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		F53942AF1F2B253100754287 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		F53942B01F2B253100754287 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		F53942B11F2B253100754287 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
-		F53942B21F2B253100754287 /* UIImage+SplitImageIntoTwoParts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SplitImageIntoTwoParts.h"; sourceTree = "<group>"; };
-		F53942B31F2B253100754287 /* UIImage+SplitImageIntoTwoParts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SplitImageIntoTwoParts.m"; sourceTree = "<group>"; };
-		F53942BA1F2B3CE300754287 /* UIImage+AddFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AddFunction.h"; sourceTree = "<group>"; };
-		F53942BB1F2B3CE300754287 /* UIImage+AddFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AddFunction.m"; sourceTree = "<group>"; };
+		F53942BF1F2B40A700754287 /* ColorMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
+		F53942C01F2B40A700754287 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
+		F53942C11F2B40A700754287 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
+		F53942C31F2B40A700754287 /* UIImage+AddFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AddFunction.h"; sourceTree = "<group>"; };
+		F53942C41F2B40A700754287 /* UIImage+AddFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AddFunction.m"; sourceTree = "<group>"; };
+		F53942C51F2B40A700754287 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		F53942C61F2B40A700754287 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		F53942C71F2B40A700754287 /* UIImage+Cut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cut.h"; sourceTree = "<group>"; };
+		F53942C81F2B40A700754287 /* UIImage+Cut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cut.m"; sourceTree = "<group>"; };
+		F53942C91F2B40A700754287 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		F53942CA1F2B40A700754287 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		F53942CB1F2B40A700754287 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		F53942CC1F2B40A700754287 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		F53942CD1F2B40A700754287 /* UIImage+SplitImageIntoTwoParts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SplitImageIntoTwoParts.h"; sourceTree = "<group>"; };
+		F53942CE1F2B40A700754287 /* UIImage+SplitImageIntoTwoParts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SplitImageIntoTwoParts.m"; sourceTree = "<group>"; };
+		F53942CF1F2B40A700754287 /* TCBFilterScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCBFilterScrollView.h; sourceTree = "<group>"; };
+		F53942D01F2B40A700754287 /* TCBFilterScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCBFilterScrollView.m; sourceTree = "<group>"; };
 		F5417CC21F219C880022E23C /* DesignClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5417CC61F219C880022E23C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5417CC81F219C880022E23C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -191,42 +191,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F53942A11F2B23C000754287 /* YBFilterImage */ = {
+		F53942BD1F2B40A700754287 /* TCBFilterImage */ = {
 			isa = PBXGroup;
 			children = (
-				F53942A51F2B253100754287 /* FilterImageLibs */,
-				F53942A21F2B23C000754287 /* TCBFilterScrollView.h */,
-				F53942A31F2B23C000754287 /* TCBFilterScrollView.m */,
+				F53942BE1F2B40A700754287 /* FilterImageLibs */,
+				F53942CF1F2B40A700754287 /* TCBFilterScrollView.h */,
+				F53942D01F2B40A700754287 /* TCBFilterScrollView.m */,
 			);
-			path = YBFilterImage;
+			path = TCBFilterImage;
 			sourceTree = "<group>";
 		};
-		F53942A51F2B253100754287 /* FilterImageLibs */ = {
+		F53942BE1F2B40A700754287 /* FilterImageLibs */ = {
 			isa = PBXGroup;
 			children = (
-				F53942A61F2B253100754287 /* ColorMatrix.h */,
-				F53942A71F2B253100754287 /* ImageUtil.h */,
-				F53942A81F2B253100754287 /* ImageUtil.m */,
-				F53942A91F2B253100754287 /* UIImage-Extensions */,
+				F53942BF1F2B40A700754287 /* ColorMatrix.h */,
+				F53942C01F2B40A700754287 /* ImageUtil.h */,
+				F53942C11F2B40A700754287 /* ImageUtil.m */,
+				F53942C21F2B40A700754287 /* UIImage-Extensions */,
 			);
 			path = FilterImageLibs;
 			sourceTree = "<group>";
 		};
-		F53942A91F2B253100754287 /* UIImage-Extensions */ = {
+		F53942C21F2B40A700754287 /* UIImage-Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F53942AA1F2B253100754287 /* UIImage+Alpha.h */,
-				F53942AB1F2B253100754287 /* UIImage+Alpha.m */,
-				F53942AC1F2B253100754287 /* UIImage+Cut.h */,
-				F53942AD1F2B253100754287 /* UIImage+Cut.m */,
-				F53942AE1F2B253100754287 /* UIImage+Resize.h */,
-				F53942AF1F2B253100754287 /* UIImage+Resize.m */,
-				F53942BA1F2B3CE300754287 /* UIImage+AddFunction.h */,
-				F53942BB1F2B3CE300754287 /* UIImage+AddFunction.m */,
-				F53942B01F2B253100754287 /* UIImage+RoundedCorner.h */,
-				F53942B11F2B253100754287 /* UIImage+RoundedCorner.m */,
-				F53942B21F2B253100754287 /* UIImage+SplitImageIntoTwoParts.h */,
-				F53942B31F2B253100754287 /* UIImage+SplitImageIntoTwoParts.m */,
+				F53942C31F2B40A700754287 /* UIImage+AddFunction.h */,
+				F53942C41F2B40A700754287 /* UIImage+AddFunction.m */,
+				F53942C51F2B40A700754287 /* UIImage+Alpha.h */,
+				F53942C61F2B40A700754287 /* UIImage+Alpha.m */,
+				F53942C71F2B40A700754287 /* UIImage+Cut.h */,
+				F53942C81F2B40A700754287 /* UIImage+Cut.m */,
+				F53942C91F2B40A700754287 /* UIImage+Resize.h */,
+				F53942CA1F2B40A700754287 /* UIImage+Resize.m */,
+				F53942CB1F2B40A700754287 /* UIImage+RoundedCorner.h */,
+				F53942CC1F2B40A700754287 /* UIImage+RoundedCorner.m */,
+				F53942CD1F2B40A700754287 /* UIImage+SplitImageIntoTwoParts.h */,
+				F53942CE1F2B40A700754287 /* UIImage+SplitImageIntoTwoParts.m */,
 			);
 			path = "UIImage-Extensions";
 			sourceTree = "<group>";
@@ -258,8 +258,8 @@
 				F539429D1F2B0C6D00754287 /* gaoyuanyuan2.jpg */,
 				F539429E1F2B0C6D00754287 /* gaoyuanyuan1.png */,
 				F57608431F28734000DBB6B8 /* sampleImage.jpg */,
+				F53942BD1F2B40A700754287 /* TCBFilterImage */,
 				F5417D2E1F21A2980022E23C /* MyLayout */,
-				F53942A11F2B23C000754287 /* YBFilterImage */,
 				F5F54C971F29E8D90018BB06 /* Paster */,
 				F5417CC81F219C880022E23C /* AppDelegate.h */,
 				F5417CC91F219C880022E23C /* AppDelegate.m */,
@@ -514,35 +514,35 @@
 				F5417D571F21A2980022E23C /* MyLayoutMeasure.m in Sources */,
 				F5417D5A1F21A2990022E23C /* MyLinearLayout.m in Sources */,
 				F5417D511F21A2980022E23C /* MyBaseLayout.m in Sources */,
+				F53942D31F2B40A700754287 /* UIImage+Alpha.m in Sources */,
 				F5417D561F21A2980022E23C /* MyLayoutDime.m in Sources */,
-				F53942A41F2B23C000754287 /* TCBFilterScrollView.m in Sources */,
 				F5417CCA1F219C880022E23C /* AppDelegate.m in Sources */,
 				F57608421F28716500DBB6B8 /* TCBStickerView.m in Sources */,
+				F53942D71F2B40A700754287 /* UIImage+SplitImageIntoTwoParts.m in Sources */,
 				F5417D591F21A2990022E23C /* MyLayoutSizeClass.m in Sources */,
+				F53942D81F2B40A700754287 /* TCBFilterScrollView.m in Sources */,
 				F5417CC71F219C880022E23C /* main.m in Sources */,
-				F53942B41F2B253100754287 /* ImageUtil.m in Sources */,
 				F5417D671F21AA0A0022E23C /* DesignRightView.m in Sources */,
-				F53942BC1F2B3CE300754287 /* UIImage+AddFunction.m in Sources */,
 				F5417D521F21A2980022E23C /* MyDimeScale.m in Sources */,
 				F5417D611F21A9B60022E23C /* DesignSourceView.m in Sources */,
 				F5417D5B1F21A2990022E23C /* MyMaker.m in Sources */,
 				F5F54C9C1F29E8D90018BB06 /* TCBPasterStageView.m in Sources */,
-				F53942B71F2B253100754287 /* UIImage+Resize.m in Sources */,
 				F5417D5C1F21A2990022E23C /* MyPathLayout.m in Sources */,
 				F5417D531F21A2980022E23C /* MyFloatLayout.m in Sources */,
-				F53942B51F2B253100754287 /* UIImage+Alpha.m in Sources */,
 				F5417D541F21A2980022E23C /* MyFlowLayout.m in Sources */,
 				F5417CF41F219D230022E23C /* DesignClothesViewController.m in Sources */,
-				F53942B91F2B253100754287 /* UIImage+SplitImageIntoTwoParts.m in Sources */,
+				F53942D21F2B40A700754287 /* UIImage+AddFunction.m in Sources */,
 				F5F54C9D1F29E8D90018BB06 /* TCBPasterView.m in Sources */,
-				F53942B81F2B253100754287 /* UIImage+RoundedCorner.m in Sources */,
 				F5417D581F21A2990022E23C /* MyLayoutPos.m in Sources */,
-				F53942B61F2B253100754287 /* UIImage+Cut.m in Sources */,
 				F5417CF71F21A0930022E23C /* DesignBottomView.m in Sources */,
+				F53942D11F2B40A700754287 /* ImageUtil.m in Sources */,
 				F5417D5E1F21A2990022E23C /* MyTableLayout.m in Sources */,
 				F5F54C921F29E4230018BB06 /* PasterChooseView.m in Sources */,
 				F5417D5D1F21A2990022E23C /* MyRelativeLayout.m in Sources */,
+				F53942D41F2B40A700754287 /* UIImage+Cut.m in Sources */,
+				F53942D61F2B40A700754287 /* UIImage+RoundedCorner.m in Sources */,
 				F57608411F28716500DBB6B8 /* TCBGripViewBorderView.m in Sources */,
+				F53942D51F2B40A700754287 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
